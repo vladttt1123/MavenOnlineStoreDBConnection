@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="persistence.dao.ICustomer_account_typeRepo">
+
+    <select id="findById" parameterType="int"  resultType="persistence.models.Customer_account_type">
+        select * from customer_account_type where idcustomer_account_type = #{id}
+    </select>
+
+    <select id="findAll" resultType="persistence.models.Customer_account_type">
+        select * from customer_account_type;
+    </select>
+
+</mapper>
