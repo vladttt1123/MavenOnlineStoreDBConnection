@@ -12,4 +12,27 @@
         select * from employees;
     </select>
 
+
+
+    <insert id="createEmployee" parameterType="persistence.models.Employees" keyProperty="idemployee" useGeneratedKeys="true">
+        insert into sakila.employees (firstName, lastName, storeId, salaries_idsalary)
+        values (#{firstName}, #{lastName}, #{storeId}, #{salaries_idsalary});
+    </insert>
+
+
+    <update id="updateEmployees" parameterType="persistence.models.Employees">
+        update sakila.employees
+        set firstName = #{firstName}, lastName = #{lastName}, storeId = #{storeId}, salaries_idsalary = #{salaries_idsalary}
+        where idemployee = #{idemployee}
+    </update>
+
+
+    <delete id="deleteById" parameterType="java.lang.Integer">
+        delete from sakila.employees
+        where idemployee = #{idemployee};
+    </delete>
+
+
+
+
 </mapper>

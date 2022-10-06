@@ -5,15 +5,15 @@ public class Employees {
     private String firstName;
     private String lastName;
     private int storeId;
-    private int salaries_id;
+    private int salaries_idsalary;
 
 
-    public Employees(int idemployee, String firstName, String lastName, int storeId, int salaries_id) {
+    public Employees(int idemployee, String firstName, String lastName, int storeId, int salaries_idsalary) {
         this.idemployee = idemployee;
         this.firstName = firstName;
         this.lastName = lastName;
         this.storeId = storeId;
-        this.salaries_id = salaries_id;
+        this.salaries_idsalary = salaries_idsalary;
     }
     public Employees(){
 
@@ -51,12 +51,12 @@ public class Employees {
         this.storeId = storeId;
     }
 
-    public int getSalaries_id() {
-        return salaries_id;
+    public int getSalaries_idsalary() {
+        return salaries_idsalary;
     }
 
-    public void setSalaries_id(int salaries_id) {
-        this.salaries_id = salaries_id;
+    public void setSalaries_idsalary(int salaries_idsalary) {
+        this.salaries_idsalary = salaries_idsalary;
     }
 
     @Override
@@ -66,7 +66,7 @@ public class Employees {
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", storeId=" + storeId +
-                ", salaries_id=" + salaries_id +
+                ", salaries_id=" + salaries_idsalary +
                 '}';
     }
 }

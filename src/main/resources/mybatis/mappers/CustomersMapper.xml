@@ -4,12 +4,38 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="persistence.dao.ICustomersRepo">
 
-    <select id="findById" parameterType="int"  resultType="persistence.models.Сustomers">
+    <select id="findById" parameterType="int"  resultType="persistence.models.Customers">
         select * from customers where idcustomers = #{id}
     </select>
 
-    <select id="findAll" resultType="persistence.models.Сustomers">
+    <select id="findAll" resultType="persistence.models.Customers">
         select * from customers;
     </select>
+
+
+
+    <insert id="createCustomer" parameterType="persistence.models.Customers" >
+        insert into sakila.customers (idcustomers, firstName, lastName, phoneNumber, city, customer_account_type_idcustomer_account_type)
+        values (#{idcustomers},#{firstName}, #{lastName}, #{phoneNumber}, #{city}, #{customer_account_type_idcustomer_account_type});
+    </insert>
+
+
+
+
+    <update id="updateCustomer" parameterType="persistence.models.Customers">
+        update sakila.customers
+        set idcustomers = #{idcustomers}, firstName = #{firstName}, lastName = #{lastName}, phoneNumber = #{phoneNumber}
+        , city = #{city}, customer_account_type_idcustomer_account_type = #{customer_account_type_idcustomer_account_type}
+        where idcustomers = #{idcustomers}
+    </update>
+
+    <delete id="deleteById" parameterType="java.lang.Integer">
+        delete from sakila.customers
+        where idcustomers = #{idcustomers};
+    </delete>
+
+
+
+
 
 </mapper>

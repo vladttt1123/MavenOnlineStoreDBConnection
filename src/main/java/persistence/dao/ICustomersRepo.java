@@ -1,18 +1,27 @@
 package persistence.dao;
 
-import persistence.models.Customer_account_type;
-import persistence.models.Сustomers;
+import persistence.models.Customers;
 
-import java.sql.SQLException;
 import java.util.List;
 
 public interface ICustomersRepo {
     //get by id
-    Сustomers findById(int id);
+    //read
+    Customers findById(int id);
 
 
     //read
-    List<Сustomers> findAll();
+    List<Customers> findAll();
+
+    //create
+    void createCustomer(Customers customer);
+
+    //update
+    void updateCustomer(Customers customer);
+
+    //delete
+    void deleteById(Integer id);
+
 
 
 
