@@ -1,0 +1,67 @@
+[ {
+  "idemployee" : 1,
+  "firstName" : "Stepan",
+  "lastName" : "Petrenko",
+  "storeId" : 3,
+  "salaries_idsalary" : 2
+}, {
+  "idemployee" : 2,
+  "firstName" : "Victoria",
+  "lastName" : "Kravhcuk",
+  "storeId" : 3,
+  "salaries_idsalary" : 3
+}, {
+  "idemployee" : 3,
+  "firstName" : "Andriy",
+  "lastName" : "Andriy",
+  "storeId" : 3,
+  "salaries_idsalary" : 4
+}, {
+  "idemployee" : 4,
+  "firstName" : "Oksana",
+  "lastName" : "Babenko",
+  "storeId" : 3,
+  "salaries_idsalary" : 5
+}, {
+  "idemployee" : 5,
+  "firstName" : "Ksenia",
+  "lastName" : "Petrenko",
+  "storeId" : 3,
+  "salaries_idsalary" : 6
+}, {
+  "idemployee" : 6,
+  "firstName" : "Roman",
+  "lastName" : "Melnyj",
+  "storeId" : 3,
+  "salaries_idsalary" : 2
+}, {
+  "idemployee" : 7,
+  "firstName" : "Vlad",
+  "lastName" : "Svitlyi",
+  "storeId" : 3,
+  "salaries_idsalary" : 3
+}, {
+  "idemployee" : 8,
+  "firstName" : "Nata",
+  "lastName" : "Natashok",
+  "storeId" : 4,
+  "salaries_idsalary" : 5
+}, {
+  "idemployee" : 9,
+  "firstName" : "Vladosik",
+  "lastName" : "Gordishok",
+  "storeId" : 4,
+  "salaries_idsalary" : 2
+}, {
+  "idemployee" : 10,
+  "firstName" : "Nata",
+  "lastName" : "Natashok",
+  "storeId" : 4,
+  "salaries_idsalary" : 5
+}, {
+  "idemployee" : 11,
+  "firstName" : "Nata",
+  "lastName" : "Natashok",
+  "storeId" : 4,
+  "salaries_idsalary" : 5
+} ]

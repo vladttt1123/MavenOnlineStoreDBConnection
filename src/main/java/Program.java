@@ -1,3 +1,4 @@
+import jackson.EmployeesJackson;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -16,6 +17,7 @@ import persistence.models.Employees;
 
 import java.io.IOException;
 import java.io.Reader;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Program {
@@ -28,22 +30,32 @@ public class Program {
         Reader reader = Resources.getResourceAsReader("mybatis/mybatis-configuration.xml");
         SqlSessionFactoryBuilder builder = new SqlSessionFactoryBuilder();
         SqlSessionFactory factory = builder.build(reader);
-
-        Employees employee = new Employees(9,"Vladosik", "Gordishok",4,2);
-        Customers customer1 = new Customers(6,"TEST","TEST","1234","Odesa",3);
-
-
+//
+//        Employees employee = new Employees(9,"Vladosik", "Gordishok",4,2);
+//        Customers customer1 = new Customers(6,"TEST","TEST","1234","Lviv",3);
+//
+//
         try(SqlSession session = factory.openSession()){
-            //Customers
 
 
-            ICustomersRepo CustomersMapper = session.getMapper(ICustomersRepo.class);
+            IEmployeesRepo EmployeesMapper = session.getMapper(IEmployeesRepo.class);
 
-            List<Customers> allCustomers = CustomersMapper.findAll();
+            List<Employees> allEmployees = EmployeesMapper.findAll();
+            allEmployees.forEach(LOGGER::info);
+
+            //writing JSON Objects ( ALL EMPLOYEES )  to result.json file in Resources JACKSON
+            EmployeesJackson.marshal(allEmployees, "./src/main/resources/jackson/result.json");
+
+//            //Customers
+//
+//
+//            ICustomersRepo CustomersMapper = session.getMapper(ICustomersRepo.class);
+//
+//            List<Customers> allCustomers = CustomersMapper.findAll();
 //            method below creates customer
 //            CustomersMapper.createCustomer(customer1);
-//            session.commit();
-//            session.close();
+//             session.commit();
+//             session.close();
 
             //method below updates existing customer
 //            CustomersMapper.updateCustomer(customer1);
@@ -51,14 +63,14 @@ public class Program {
 //            session.close();
 
             //method below deletes existing customer
-            CustomersMapper.deleteById(6);
-            session.commit();
-            session.close();
+//            CustomersMapper.deleteById(6);
+//            session.commit();
+//            session.close();
 //
-
-
-
-            allCustomers.forEach(LOGGER::info);
+//
+//
+//
+//            allCustomers.forEach(LOGGER::info);
 
             //method below adds new object to database
 
@@ -131,13 +143,6 @@ public class Program {
 ////
 //            List<DeliveryProvider> allDeliveryProviders = DeliveryProvMapper.findAll();
 //            allDeliveryProviders.forEach(LOGGER::info);
-
-
-
-
-
-
-
 
         }
 

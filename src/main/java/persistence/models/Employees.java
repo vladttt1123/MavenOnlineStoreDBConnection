@@ -1,10 +1,31 @@
 package persistence.models;
 
+import javax.xml.bind.annotation.*;
+import org.codehaus.jackson.annotate.JsonProperty;
+
+@XmlRootElement(name = "employees")
+@XmlType (propOrder = {"idemployee","firstName","lastName","storeId","salaries_idsalary" })
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Employees {
+
+    @XmlAttribute
+    @JsonProperty
     private int idemployee;
+
+    @XmlElement(name ="firstName")
+    @JsonProperty
     private String firstName;
+
+    @XmlElement (name = "lastName")
+    @JsonProperty
     private String lastName;
+
+    @XmlElement (name = "storeId")
+    @JsonProperty
     private int storeId;
+
+    @XmlElement (name = "salaries_idsalary")
+    @JsonProperty
     private int salaries_idsalary;
 
 
