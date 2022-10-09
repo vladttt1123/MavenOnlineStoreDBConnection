@@ -13,6 +13,7 @@ import persistence.models.*;
 import javax.xml.bind.JAXBException;
 import java.io.IOException;
 import java.io.Reader;
+import java.sql.SQLException;
 import java.util.List;
 
 public class Program {
@@ -150,6 +151,8 @@ public class Program {
 //            List<DeliveryProvider> allDeliveryProviders = DeliveryProvMapper.findAll();
 //            allDeliveryProviders.forEach(LOGGER::info);
 
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
 
 

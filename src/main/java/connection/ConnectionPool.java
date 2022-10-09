@@ -23,6 +23,7 @@ public class ConnectionPool implements IConnectionPool {
     private final static int INITIAL_POOL_SIZE = 1;
     private final static int MAX_POOL_SIZE = 10;
     private final static int MAX_TIMEOUT = 5;
+    private static ConnectionPool instance;
 
     public static ConnectionPool create(String url, String user, String password) throws SQLException {
         List<Connection> pool = new ArrayList<>(INITIAL_POOL_SIZE);
@@ -56,6 +57,13 @@ public class ConnectionPool implements IConnectionPool {
 
         usedConnections.add(connection);
         return connection;
+    }
+
+    public static synchronized ConnectionPool getInstance() {
+        if (instance==null) {
+            instance = new ConnectionPool();
+        }
+        return instance;
     }
 
     @Override
