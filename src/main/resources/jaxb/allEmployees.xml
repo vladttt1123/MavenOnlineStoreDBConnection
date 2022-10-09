@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<list-employees>
+    <employee idemployee="1">
+        <firstName>Stepan</firstName>
+        <lastName>Petrenko</lastName>
+        <storeId>3</storeId>
+        <salaries_idsalary>2</salaries_idsalary>
+    </employee>
+    <employee idemployee="2">
+        <firstName>Victoria</firstName>
+        <lastName>Kravhcuk</lastName>
+        <storeId>3</storeId>
+        <salaries_idsalary>3</salaries_idsalary>
+    </employee>
+    <employee idemployee="3">
+        <firstName>Andriy</firstName>
+        <lastName>Andriy</lastName>
+        <storeId>3</storeId>
+        <salaries_idsalary>4</salaries_idsalary>
+    </employee>
+    <employee idemployee="4">
+        <firstName>Oksana</firstName>
+        <lastName>Babenko</lastName>
+        <storeId>3</storeId>
+        <salaries_idsalary>5</salaries_idsalary>
+    </employee>
+    <employee idemployee="5">
+        <firstName>Ksenia</firstName>
+        <lastName>Petrenko</lastName>
+        <storeId>3</storeId>
+        <salaries_idsalary>6</salaries_idsalary>
+    </employee>
+    <employee idemployee="6">
+        <firstName>Roman</firstName>
+        <lastName>Melnyj</lastName>
+        <storeId>3</storeId>
+        <salaries_idsalary>2</salaries_idsalary>
+    </employee>
+    <employee idemployee="7">
+        <firstName>Vlad</firstName>
+        <lastName>Svitlyi</lastName>
+        <storeId>3</storeId>
+        <salaries_idsalary>3</salaries_idsalary>
+    </employee>
+    <employee idemployee="8">
+        <firstName>Nata</firstName>
+        <lastName>Natashok</lastName>
+        <storeId>4</storeId>
+        <salaries_idsalary>5</salaries_idsalary>
+    </employee>
+    <employee idemployee="9">
+        <firstName>Vladosik</firstName>
+        <lastName>Gordishok</lastName>
+        <storeId>4</storeId>
+        <salaries_idsalary>2</salaries_idsalary>
+    </employee>
+    <employee idemployee="10">
+        <firstName>Nata</firstName>
+        <lastName>Natashok</lastName>
+        <storeId>4</storeId>
+        <salaries_idsalary>5</salaries_idsalary>
+    </employee>
+    <employee idemployee="11">
+        <firstName>Nata</firstName>
+        <lastName>Natashok</lastName>
+        <storeId>4</storeId>
+        <salaries_idsalary>5</salaries_idsalary>
+    </employee>
+</list-employees>

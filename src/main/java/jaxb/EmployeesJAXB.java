@@ -9,6 +9,7 @@ import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 import java.io.*;
+import java.util.List;
 
 public class EmployeesJAXB {
 
@@ -20,13 +21,28 @@ public class EmployeesJAXB {
 
     public static void marshal(Employees employee, String filePath) throws IOException, JAXBException {
         JAXBContext context = JAXBContext.newInstance(Employees.class);
-        LOGGER.info("Created context");
+        LOGGER.info("context created");
         Marshaller marshaller = context.createMarshaller();
-        LOGGER.info("Created marshaller");
+        LOGGER.info("marshaller Created");
         marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-        LOGGER.info("Marshalled object");
+        LOGGER.info("object Marshalled");
         marshaller.marshal(employee, new FileWriter(filePath));
     }
+
+    public static void marshal(List<Employees> employees, String filePath) throws IOException, JAXBException {
+        JAXBContext context = JAXBContext.newInstance(EmployeesHolder.class);
+        LOGGER.info("context created ");
+        Marshaller marshaller = context.createMarshaller();
+        LOGGER.info("marshaller created");
+        marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+        EmployeesHolder employeesHolder = new EmployeesHolder(employees);
+        marshaller.marshal(employeesHolder, new File(filePath));
+        LOGGER.info("object marshalled");
+    }
+
+
+
+
 
 
     /// GET FROM XML

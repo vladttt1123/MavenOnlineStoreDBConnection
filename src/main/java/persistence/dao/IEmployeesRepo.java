@@ -8,7 +8,7 @@ import java.util.List;
 public interface IEmployeesRepo {
 
     //read
-    IEmployeesRepo findById(int idemployee);
+    Employees findById(int idemployee);
 
     List<Employees> findAll();
     
